@@ -24,17 +24,7 @@ symbolscore "C" "X" = 2
 symbolscore "C" "Y" = 3
 symbolscore "C" "Z" = 1
 symbolscore _ _ = 0
--- 1 rock, 2 paper, 3 scissors
--- A rock, B paper, C scissors
--- A X lose -> X scissors
--- A Y draw -> Y rock
--- A Z win -> Z paper
--- B X -> X rock
--- B Y -> Y paper
--- B Z -> Z scissors
--- C X -> X paper
--- C Y -> Y scissors
--- C Z -> Z rock
+
 resultscore :: [String] -> Int
 resultscore [a,b] = case b of
     ("X") -> 0 + symbolscore a b
