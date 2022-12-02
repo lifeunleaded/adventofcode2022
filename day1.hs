@@ -4,27 +4,18 @@ import Data.List
 
 main = do  
         let list = []
-        handle <- openFile "day1_test_input" ReadMode
+        handle <- openFile "day1_input" ReadMode
         contents <- hGetContents handle
         let elves = lines contents
         let list' = f elves [0]
         let list = reverse list'
-        print "List:"
-        print list
         let max = maximum list
         print "Max:"
         print max
         let sorted = sort list
-        print "Sorted:"
-        print sorted
         let reversesorted = reverse sorted
-        print "Reverse sorted:"
-        print reversesorted
         let max3 = take 3 reversesorted
-        print max3
         let max3sum = sum max3
-        print "Top 3:"
-        print max3
         print "Top 3 sum:"
         print max3sum
         hClose handle   
