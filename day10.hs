@@ -40,4 +40,4 @@ getSignalValue x i = (x !! (i-1)) * i
 combine :: Int -> Int -> Int
 combine x y = case ((abs (x-y)) < 2) of
     True -> 1
-    otherwise -> 0
+    False -> 0
